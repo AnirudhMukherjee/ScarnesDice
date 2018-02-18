@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.anirudh.scarnesdice.MainActivity">
+
+    <TextView
+        android:id="@+id/yourScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/computerScore"
+        android:layout_marginTop="48dp"
+        android:text="Your Score : 0" />
+
+    <TextView
+        android:id="@+id/computerScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/rollbtn"
+        android:layout_below="@+id/yourScore"
+        android:layout_marginTop="39dp"
+        android:text="Computer's Score: 0" />
+
+    <ImageView
+        android:id="@+id/dice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/computerScore"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+        android:src="@drawable/dice1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rollbtn"
+        android:text="@string/roll"
+        android:layout_below="@id/dice"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"/>
+
+    <Button
+        android:id="@+id/holdbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/rollbtn"
+        android:layout_alignBottom="@+id/rollbtn"
+        android:layout_centerHorizontal="true"
+        android:text="@string/hold" />
+
+    <Button
+        android:id="@+id/resetbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/holdbtn"
+        android:layout_toEndOf="@+id/dice"
+        android:text="@string/reset" />
+</RelativeLayout>
